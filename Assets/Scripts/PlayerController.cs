@@ -16,8 +16,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float groundCheckRayDistance;
     [Header("Rotation info")]
     [SerializeField] private float smooth;
-
-    public bool canRotation;
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D> ();
@@ -28,10 +26,6 @@ public class PlayerController : MonoBehaviour
         Jump();
         ChangeGravity();
         SetJumpPower();
-        if(canRotation)
-            Rotation();
-        if(isOnGround())
-            canRotation = false;
     }
     private void Run()
     {
@@ -59,7 +53,6 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.R))
         {
             rb2d.gravityScale = -rb2d.gravityScale;
-            canRotation = true;
         }
     }
 
@@ -71,10 +64,4 @@ public class PlayerController : MonoBehaviour
             jumpPower = -math.abs(jumpPower);
     }
 
-    private void Rotation()
-    {
-        float speed = 10F;
-        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, 180), Time.deltaTime * speed);
-
-    }
 }
