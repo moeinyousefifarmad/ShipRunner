@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using Unity.Mathematics;
-using UnityEditor;
+
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -17,6 +16,7 @@ public class PlayerController : MonoBehaviour
     
 
     private Animator animator;
+    private AnimatorClipInfo[] clipInfo;
     
     private void Awake()
     {
@@ -56,6 +56,10 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.R))
         {
             rb2d.gravityScale = -rb2d.gravityScale;
+            if(GetCurrentClipName()=="idle" || GetCurrentClipName()=="rotateTo360")
+                animator.SetTrigger("to180");
+            else if(GetCurrentClipName()=="rotateTo180")
+                animator.SetTrigger("to360");
         }
     }
 
@@ -66,5 +70,12 @@ public class PlayerController : MonoBehaviour
         else if(rb2d.gravityScale < 0)   
             jumpPower = -math.abs(jumpPower);
     }
+
+    public string GetCurrentClipName(){
+        int layerIndex = 0;
+        clipInfo = animator.GetCurrentAnimatorClipInfo(layerIndex); 
+        return clipInfo[0].clip.name;
+    }
+
 
 }
