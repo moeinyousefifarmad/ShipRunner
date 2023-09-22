@@ -14,10 +14,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] Transform groundCheck;
     [SerializeField] private float groundCheckRayDistance;
-    [Header("Rotation info")]
-    [SerializeField] private float smooth;
+    
+
+    private Animator animator;
+    
     private void Awake()
     {
+        animator = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D> ();
     }
     private void Update()
