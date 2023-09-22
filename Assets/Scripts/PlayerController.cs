@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
+using UnityEditor;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -12,6 +14,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] Transform groundCheck;
     [SerializeField] private float groundCheckRayDistance;
+    [Header("Rotation info")]
+    [SerializeField] private float smooth;
+
+    public bool canRotation;
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D> ();
@@ -20,6 +26,12 @@ public class PlayerController : MonoBehaviour
     {
         Run();
         Jump();
+        ChangeGravity();
+        SetJumpPower();
+        if(canRotation)
+            Rotation();
+        if(isOnGround())
+            canRotation = false;
     }
     private void Run()
     {
@@ -31,6 +43,38 @@ public class PlayerController : MonoBehaviour
             rb2d.velocity = new Vector2 (rb2d.velocity.x , jumpPower);
     }
 
-    private bool isOnGround()=>Physics2D.Raycast(groundCheck.position, Vector2.down , groundCheckRayDistance , groundLayer);
-    private void ChangeGravity(){}
+    private bool isOnGround()
+    {
+        if(rb2d.gravityScale > 0 ){
+            return Physics2D.Raycast(groundCheck.position, Vector2.down , groundCheckRayDistance , groundLayer);
+        }
+        else if(rb2d.gravityScale < 0){
+            return Physics2D.Raycast(groundCheck.position, Vector2.up , groundCheckRayDistance , groundLayer);           
+        }
+        else
+            return false;
+    }
+    private void ChangeGravity()
+    {
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            rb2d.gravityScale = -rb2d.gravityScale;
+            canRotation = true;
+        }
+    }
+
+    private void SetJumpPower()
+    {
+        if(rb2d.gravityScale > 0)
+            jumpPower = math.abs(jumpPower);
+        else if(rb2d.gravityScale < 0)   
+            jumpPower = -math.abs(jumpPower);
+    }
+
+    private void Rotation()
+    {
+        float speed = 10F;
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, 180), Time.deltaTime * speed);
+
+    }
 }
