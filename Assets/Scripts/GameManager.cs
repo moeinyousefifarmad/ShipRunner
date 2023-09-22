@@ -4,10 +4,16 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance;
     public bool isPlayerDead { get; set; }
 
     private void Awake()
     {
+        if(instance == null)
+            instance = this;
+        else
+            Destroy(gameObject);
+
         isPlayerDead = false;
     }
     private void Update()
