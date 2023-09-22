@@ -4,6 +4,17 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public bool isPlayerDead { get; set; }
+
+    private void Awake()
+    {
+        isPlayerDead = false;
+    }
+    private void Update()
+    {
+        if (isPlayerDead)
+            OnRestartButton();
+    }
     public void onStartGameButton()
     {
         SceneManager.LoadScene("PrototypeLevel");
@@ -21,4 +32,5 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
 }
