@@ -12,10 +12,17 @@ public class EnemyShooter : MonoBehaviour
     [SerializeField] private Transform RaycastPos;
     [SerializeField] private float rayDistance;
     [SerializeField] private LayerMask PlayerLayer;
-
+    [Header("Shooting info")]
     [SerializeField] private float delayOnShooting;
+    [SerializeField] private float forcePlayerJumpPower;
     private float shootingTimer;
+    private Rigidbody2D rb2d;
+    private PlayerController playerController;
 
+    private void Awake()
+    {
+        rb2d = GetComponent<Rigidbody2D>();
+    }
     private void Update()
     {
         shootingTimer += Time.deltaTime;
@@ -50,10 +57,36 @@ public class EnemyShooter : MonoBehaviour
             return false;
     }
 
-   // private bool IsHittedByPlayer()
-   // {
-       // if()
-   // }
+    private void ForcePlayerJumpOnHitting(Collision2D playerCollision)
+    {
+        playerController = playerCollision.collider.gameObject.GetComponent<PlayerController>();
+        if(playerController.rb2d.gravityScale > 0)
+            playerController.rb2d.velocity = new Vector2(rb2d.velocity.x , forcePlayerJumpPower);
+        else if(playerController.rb2d.gravityScale < 0) 
+            playerController.rb2d.velocity = new Vector2(rb2d.velocity.x , -forcePlayerJumpPower);
+    }
 
-   
-}
+    private void FallOnHit(Collision2D playerCollision)
+    {
+        playerController = playerCollision.collider.gameObject.GetComponent<PlayerController>();
+        if(playerController.rb2d.gravityScale > 0)
+        {
+            rb2d.bodyType = RigidbodyType2D.Dynamic;
+            rb2d.gravityScale = 5;
+        }
+        else if(playerController.rb2d.gravityScale < 0)
+        {
+            rb2d.bodyType = RigidbodyType2D.Dynamic;
+            rb2d.gravityScale = -5;
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.collider.tag == "Player")
+        {
+            FallOnHit(collision);
+            ForcePlayerJumpOnHitting(collision);
+        }
+    }
+
+}   

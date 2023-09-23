@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private Rigidbody2D rb2d;
+
     [Header("Movement info")]
     [SerializeField] private float jumpPower;
     [SerializeField] private float runSpeed;
@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Transform groundCheck;
     [SerializeField] private float groundCheckRayDistance;
     
-
+    public Rigidbody2D rb2d;
     private Animator animator;
     private AnimatorClipInfo[] clipInfo;
     
@@ -71,7 +71,7 @@ public class PlayerController : MonoBehaviour
             jumpPower = -math.abs(jumpPower);
     }
 
-    public string GetCurrentClipName(){
+    private string GetCurrentClipName(){
         int layerIndex = 0;
         clipInfo = animator.GetCurrentAnimatorClipInfo(layerIndex); 
         return clipInfo[0].clip.name;
