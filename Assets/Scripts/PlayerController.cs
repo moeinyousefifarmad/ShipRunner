@@ -17,9 +17,11 @@ public class PlayerController : MonoBehaviour
     
     public Rigidbody2D rb2d;
     private Animator animator;
+    private SpriteRenderer spriteRenderer;
     
     private void Awake()
     {
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         rb2d = GetComponent<Rigidbody2D> ();
         animator  = GetComponentInChildren<Animator> ();
     }
@@ -34,6 +36,7 @@ public class PlayerController : MonoBehaviour
     }
     private void Update()
     {
+        SetSptireRender();
         Run();
         Jump();       
         SetJumpPower();
@@ -70,6 +73,7 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.R))
         {
             rb2d.gravityScale = -rb2d.gravityScale;
+            animator.SetBool("isGravityChange" , true);
         }
     }
 
@@ -85,5 +89,19 @@ public class PlayerController : MonoBehaviour
     {
         animator.SetBool("isOnGround", isOnGround());
         animator.SetFloat("yVelocity", rb2d.velocity.y);
+    }
+
+    private void SetSptireRender()
+    {
+        if(Physics2D.Raycast(groundDownCheck.position, Vector2.down , groundCheckRayDistance , groundLayer))
+            {
+            spriteRenderer.flipX = false;
+            spriteRenderer.flipY = false;
+            }
+        else if(Physics2D.Raycast(groundTopCheck.position, Vector2.up , groundCheckRayDistance , groundLayer))
+        {
+           // spriteRenderer.flipX = true;
+            spriteRenderer.flipY = true;
+        }
     }
 }
