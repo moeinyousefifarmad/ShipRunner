@@ -123,6 +123,76 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &379294682
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8675972175347868002, guid: 4c314a4304247684fa8d8667179b4d5a, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8675972175347868002, guid: 4c314a4304247684fa8d8667179b4d5a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 139.21175
+      objectReference: {fileID: 0}
+    - target: {fileID: 8675972175347868002, guid: 4c314a4304247684fa8d8667179b4d5a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.6673098
+      objectReference: {fileID: 0}
+    - target: {fileID: 8675972175347868002, guid: 4c314a4304247684fa8d8667179b4d5a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.8635453
+      objectReference: {fileID: 0}
+    - target: {fileID: 8675972175347868002, guid: 4c314a4304247684fa8d8667179b4d5a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8675972175347868002, guid: 4c314a4304247684fa8d8667179b4d5a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8675972175347868002, guid: 4c314a4304247684fa8d8667179b4d5a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8675972175347868002, guid: 4c314a4304247684fa8d8667179b4d5a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8675972175347868002, guid: 4c314a4304247684fa8d8667179b4d5a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8675972175347868002, guid: 4c314a4304247684fa8d8667179b4d5a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8675972175347868002, guid: 4c314a4304247684fa8d8667179b4d5a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8675972175347868012, guid: 4c314a4304247684fa8d8667179b4d5a, type: 3}
+      propertyPath: m_Name
+      value: LevelButtons
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4c314a4304247684fa8d8667179b4d5a, type: 3}
+--- !u!114 &379294683 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8675972175347868003, guid: 4c314a4304247684fa8d8667179b4d5a, type: 3}
+  m_PrefabInstance: {fileID: 379294682}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3cbfa72bf554e547b067a96de061d5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &626959502
 GameObject:
   m_ObjectHideFlags: 0
@@ -493,8 +563,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1537664465}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 379294683}
+        m_TargetAssemblyTypeName: LevelButtons, Assembly-CSharp
         m_MethodName: onStartGameButton
         m_Mode: 1
         m_Arguments:
@@ -627,8 +697,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1537664465}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 379294683}
+        m_TargetAssemblyTypeName: LevelButtons, Assembly-CSharp
         m_MethodName: OnQuitGameButton
         m_Mode: 1
         m_Arguments:
@@ -677,17 +747,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1257746521}
   m_CullTransparentMesh: 1
---- !u!114 &1537664465 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1608704451374502213, guid: bd562c32b8ef55a45b118166d389439f, type: 3}
-  m_PrefabInstance: {fileID: 1608704449942041748}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b84243dd8e17a94f8d55785f670fb13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1790155571
 GameObject:
   m_ObjectHideFlags: 0
