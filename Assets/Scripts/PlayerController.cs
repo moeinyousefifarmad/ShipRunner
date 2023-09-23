@@ -16,12 +16,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float groundCheckRayDistance;
     
     public Rigidbody2D rb2d;
-    private Animator animator;
-    private AnimatorClipInfo[] clipInfo;
+    //private Animator animator;
+    //private AnimatorClipInfo[] clipInfo;
     
     private void Awake()
     {
-        animator = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D> ();
     }
     private void Update()
@@ -62,10 +61,6 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.R))
         {
             rb2d.gravityScale = -rb2d.gravityScale;
-         //   if(GetCurrentClipName()=="idle" || GetCurrentClipName()=="rotateTo360")
-             //   animator.SetTrigger("to180");
-          //  else if(GetCurrentClipName()=="rotateTo180")
-              //  animator.SetTrigger("to360");
         }
     }
 
@@ -77,11 +72,11 @@ public class PlayerController : MonoBehaviour
             jumpPower = -math.abs(jumpPower);
     }
 
-    private string GetCurrentClipName(){
-        int layerIndex = 0;
-        clipInfo = animator.GetCurrentAnimatorClipInfo(layerIndex); 
-        return clipInfo[0].clip.name;
-    }
+    // private string GetCurrentClipName(){
+    //     int layerIndex = 0;
+    //     clipInfo = animator.GetCurrentAnimatorClipInfo(layerIndex); 
+    //     return clipInfo[0].clip.name;
+    // }
 
 
 }
