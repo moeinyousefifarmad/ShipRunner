@@ -16,12 +16,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float groundCheckRayDistance;
     
     public Rigidbody2D rb2d;
-    //private Animator animator;
-    //private AnimatorClipInfo[] clipInfo;
+    private Animator animator;
     
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D> ();
+        animator  = GetComponentInChildren<Animator> ();
     }
 
     private void Start()
@@ -35,9 +35,9 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         Run();
-        Jump();
-        
+        Jump();       
         SetJumpPower();
+        AnimationSetUp();
     }
 
     private void LateUpdate()
@@ -81,11 +81,9 @@ public class PlayerController : MonoBehaviour
             jumpPower = -math.abs(jumpPower);
     }
 
-    // private string GetCurrentClipName(){
-    //     int layerIndex = 0;
-    //     clipInfo = animator.GetCurrentAnimatorClipInfo(layerIndex); 
-    //     return clipInfo[0].clip.name;
-    // }
-
-
+    private void AnimationSetUp()
+    {
+        animator.SetBool("isOnGround", isOnGround());
+        animator.SetFloat("yVelocity", rb2d.velocity.y);
+    }
 }
