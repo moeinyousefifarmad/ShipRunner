@@ -26,8 +26,7 @@ public class EnemyShooter : MonoBehaviour
 
     private void Shoot()
     {
-      //  Instantiate(EnemyBulletProjectile , BulletRespawnPos.position , quaternion.identity , BulletHolder);
-      Debug.Log("shoot");
+        Instantiate(EnemyBulletProjectile , BulletRespawnPos.position , quaternion.identity , BulletHolder);
     }
     private bool IsPlayerDetected()
     {
@@ -50,4 +49,11 @@ public class EnemyShooter : MonoBehaviour
         else 
             return false;
     }
+
+   // private bool IsHittedByPlayer()
+   // {
+       // if()
+   // }
+
+   
 }
