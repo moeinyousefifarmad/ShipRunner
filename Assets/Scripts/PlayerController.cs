@@ -23,6 +23,15 @@ public class PlayerController : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D> ();
     }
+
+    private void Start()
+    {
+        if(GameManager.instance.haveCheckPoint)
+        {
+            rb2d.gravityScale = GameManager.instance.LastGravityScale;
+            transform.position = GameManager.instance.lastCheckPointPosition;
+        }
+    }
     private void Update()
     {
         Run();

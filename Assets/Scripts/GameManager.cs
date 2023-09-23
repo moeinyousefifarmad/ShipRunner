@@ -6,20 +6,34 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public bool isPlayerDead { get; set; }
-
+    public Vector2 lastCheckPointPosition;
+    public float LastGravityScale;
+    private PlayerController playerController;
+    public bool haveCheckPoint;
     private void Awake()
     {
+        playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        
         if(instance == null)
+        {
             instance = this;
-        else
+            DontDestroyOnLoad(instance);
+           //
+        }
+        else if(instance != null)
             Destroy(gameObject);
 
         isPlayerDead = false;
     }
     private void Update()
     {
+
         if (isPlayerDead)
+        {
+            //ResetPlayerPos();
             OnRestartButton();
+            isPlayerDead = false;
+        }
     }
     public void onStartGameButton()
     {
@@ -39,4 +53,9 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
+    private void ResetPlayerPos()
+    {
+        playerController.transform.position = lastCheckPointPosition;
+        playerController.rb2d.gravityScale = LastGravityScale;
+    }
 }
