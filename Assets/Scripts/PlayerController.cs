@@ -27,8 +27,13 @@ public class PlayerController : MonoBehaviour
     {
         Run();
         Jump();
-        ChangeGravity();
+        
         SetJumpPower();
+    }
+
+    private void LateUpdate()
+    {
+        ChangeGravity();
     }
     private void Run()
     {
@@ -56,10 +61,10 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.R))
         {
             rb2d.gravityScale = -rb2d.gravityScale;
-            if(GetCurrentClipName()=="idle" || GetCurrentClipName()=="rotateTo360")
-                animator.SetTrigger("to180");
-            else if(GetCurrentClipName()=="rotateTo180")
-                animator.SetTrigger("to360");
+         //   if(GetCurrentClipName()=="idle" || GetCurrentClipName()=="rotateTo360")
+             //   animator.SetTrigger("to180");
+          //  else if(GetCurrentClipName()=="rotateTo180")
+              //  animator.SetTrigger("to360");
         }
     }
 

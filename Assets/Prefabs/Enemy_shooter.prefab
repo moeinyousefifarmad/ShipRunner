@@ -239,7 +239,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3525485204539134956}
-  - component: {fileID: 3243365807801330309}
+  - component: {fileID: 7295848093470889429}
   - component: {fileID: 8344690798184827670}
   - component: {fileID: 3525485204539134959}
   m_Layer: 7
@@ -265,10 +265,10 @@ Transform:
   - {fileID: 3525485203778390959}
   - {fileID: 3525485204247457992}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &3243365807801330309
-CircleCollider2D:
+--- !u!70 &7295848093470889429
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -280,9 +280,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.19}
-  serializedVersion: 2
-  m_Radius: 0.22147298
+  m_Offset: {x: -0.13719782, y: 0.16839969}
+  m_Size: {x: 0.8331972, y: 0.26760635}
+  m_Direction: 1
 --- !u!50 &8344690798184827670
 Rigidbody2D:
   serializedVersion: 4
@@ -320,7 +320,7 @@ MonoBehaviour:
   BulletRespawnPos: {fileID: 3525485203778390959}
   BulletHolder: {fileID: 0}
   RaycastPos: {fileID: 3525485204247457992}
-  rayDistance: 12
+  rayDistance: 9
   PlayerLayer:
     serializedVersion: 2
     m_Bits: 64
