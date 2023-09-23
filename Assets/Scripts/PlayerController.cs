@@ -11,7 +11,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float runSpeed;
     [Header("Ground detection info")]
     [SerializeField] private LayerMask groundLayer;
-    [SerializeField] Transform groundCheck;
+    [SerializeField] Transform groundDownCheck;
+    [SerializeField] Transform groundTopCheck;
     [SerializeField] private float groundCheckRayDistance;
     
     public Rigidbody2D rb2d;
@@ -48,10 +49,10 @@ public class PlayerController : MonoBehaviour
     private bool isOnGround()
     {
         if(rb2d.gravityScale > 0 ){
-            return Physics2D.Raycast(groundCheck.position, Vector2.down , groundCheckRayDistance , groundLayer);
+            return Physics2D.Raycast(groundDownCheck.position, Vector2.down , groundCheckRayDistance , groundLayer);
         }
         else if(rb2d.gravityScale < 0){
-            return Physics2D.Raycast(groundCheck.position, Vector2.up , groundCheckRayDistance , groundLayer);           
+            return Physics2D.Raycast(groundTopCheck.position, Vector2.up , groundCheckRayDistance , groundLayer);           
         }
         else
             return false;
