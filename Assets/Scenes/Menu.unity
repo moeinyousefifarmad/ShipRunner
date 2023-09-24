@@ -1180,6 +1180,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8028963291583208793, guid: c030a00976a967c4ea7ec08892eb5d0a, type: 3}
+      propertyPath: m_text
+      value: It was very fast and sudden. In the blink of an eye, they entered the
+        space station. There were a lot of them, and the only way to escape was to
+        get to the ship at the end of the station. God bless us...
+      objectReference: {fileID: 0}
     - target: {fileID: 8028963291583208795, guid: c030a00976a967c4ea7ec08892eb5d0a, type: 3}
       propertyPath: m_Name
       value: Story
