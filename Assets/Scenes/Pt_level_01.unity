@@ -12465,6 +12465,10 @@ PrefabInstance:
       value: Main Camera
       objectReference: {fileID: 0}
     - target: {fileID: 1199552700606997058, guid: 99944d8e4efe1c64b8427b37ea7cd7c6, type: 3}
+      propertyPath: orthographic size
+      value: 8.4375
+      objectReference: {fileID: 0}
+    - target: {fileID: 1199552700606997058, guid: 99944d8e4efe1c64b8427b37ea7cd7c6, type: 3}
       propertyPath: m_BackGroundColor.b
       value: 0
       objectReference: {fileID: 0}
@@ -12482,7 +12486,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1199552700606997181, guid: 99944d8e4efe1c64b8427b37ea7cd7c6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.185644
+      value: -6.6524096
       objectReference: {fileID: 0}
     - target: {fileID: 1199552700606997181, guid: 99944d8e4efe1c64b8427b37ea7cd7c6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12518,6 +12522,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1199552700606997181, guid: 99944d8e4efe1c64b8427b37ea7cd7c6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1199552701126400575, guid: 99944d8e4efe1c64b8427b37ea7cd7c6, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1199552701126400575, guid: 99944d8e4efe1c64b8427b37ea7cd7c6, type: 3}
+      propertyPath: m_CropFrameX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1199552701126400575, guid: 99944d8e4efe1c64b8427b37ea7cd7c6, type: 3}
+      propertyPath: m_CropFrameY
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1199552701126400575, guid: 99944d8e4efe1c64b8427b37ea7cd7c6, type: 3}
+      propertyPath: m_StretchFill
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1199552701126400575, guid: 99944d8e4efe1c64b8427b37ea7cd7c6, type: 3}
+      propertyPath: m_PixelSnapping
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -12829,7 +12853,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6103027764429350003, guid: 41435ff373eb4f3468ee1545e4dd043d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.185644
+      value: -6.6524096
       objectReference: {fileID: 0}
     - target: {fileID: 6103027764429350003, guid: 41435ff373eb4f3468ee1545e4dd043d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12871,6 +12895,10 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 2144605639}
+    - target: {fileID: 6103027764429350004, guid: 41435ff373eb4f3468ee1545e4dd043d, type: 3}
+      propertyPath: m_Lens.OrthographicSize
+      value: 8.4375
+      objectReference: {fileID: 0}
     - target: {fileID: 6103027764429350005, guid: 41435ff373eb4f3468ee1545e4dd043d, type: 3}
       propertyPath: m_Name
       value: CM vcam1
