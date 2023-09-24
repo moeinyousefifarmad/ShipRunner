@@ -27,6 +27,7 @@ public class EnemyBullet : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            AudioManager.Instance.PlayerDieAudio();
             GameManager.instance.isPlayerDead = true;
         }
     }

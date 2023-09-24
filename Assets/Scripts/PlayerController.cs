@@ -54,7 +54,10 @@ public class PlayerController : MonoBehaviour
     private void Jump()
     {
         if(Input.GetKeyDown(KeyCode.Space) && isOnGround())
+        {
             rb2d.velocity = new Vector2 (rb2d.velocity.x , jumpPower);
+            AudioManager.Instance.PlayJumpAudio();
+        }
     }
 
     private bool isOnGround()
@@ -74,6 +77,7 @@ public class PlayerController : MonoBehaviour
         {
             rb2d.gravityScale = -rb2d.gravityScale;
             animator.SetBool("isGravityChange" , true);
+            AudioManager.Instance.PlayChangeGravityAudio();
         }
     }
 

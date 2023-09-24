@@ -34,6 +34,7 @@ public class EnemyShooter : MonoBehaviour
     private void Shoot()
     {
         Instantiate(EnemyBulletProjectile , BulletRespawnPos.position , quaternion.identity , BulletHolder);
+        AudioManager.Instance.PlayerEnemyShootAudio();
     }
     private bool IsPlayerDetected()
     {
@@ -61,9 +62,15 @@ public class EnemyShooter : MonoBehaviour
     {
         playerController = playerCollision.collider.gameObject.GetComponent<PlayerController>();
         if(playerController.rb2d.gravityScale > 0)
+        {
             playerController.rb2d.velocity = new Vector2(rb2d.velocity.x , forcePlayerJumpPower);
+            AudioManager.Instance.PlayJumpAudio();
+        }
         else if(playerController.rb2d.gravityScale < 0) 
+        {
             playerController.rb2d.velocity = new Vector2(rb2d.velocity.x , -forcePlayerJumpPower);
+            AudioManager.Instance.PlayJumpAudio();
+        }
     }
 
     private void FallOnHit(Collision2D playerCollision)
