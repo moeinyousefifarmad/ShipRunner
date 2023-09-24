@@ -131,6 +131,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 798718567}
     m_Modifications:
+    - target: {fileID: 1513093727276174472, guid: 385a99c90c34a7a448d2c326151aa243, type: 3}
+      propertyPath: m_Color.a
+      value: 0.56078434
+      objectReference: {fileID: 0}
     - target: {fileID: 1513093727276174473, guid: 385a99c90c34a7a448d2c326151aa243, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -204,6 +208,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 798718567}
     m_Modifications:
+    - target: {fileID: 1513093727276174472, guid: 385a99c90c34a7a448d2c326151aa243, type: 3}
+      propertyPath: m_Color.a
+      value: 0.56078434
+      objectReference: {fileID: 0}
     - target: {fileID: 1513093727276174473, guid: 385a99c90c34a7a448d2c326151aa243, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -528,6 +536,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 798718567}
     m_Modifications:
+    - target: {fileID: 1513093727276174472, guid: 385a99c90c34a7a448d2c326151aa243, type: 3}
+      propertyPath: m_Color.a
+      value: 0.56078434
+      objectReference: {fileID: 0}
     - target: {fileID: 1513093727276174473, guid: 385a99c90c34a7a448d2c326151aa243, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -596,6 +608,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 798718567}
     m_Modifications:
+    - target: {fileID: 1513093727276174472, guid: 385a99c90c34a7a448d2c326151aa243, type: 3}
+      propertyPath: m_Color.a
+      value: 0.56078434
+      objectReference: {fileID: 0}
     - target: {fileID: 1513093727276174473, guid: 385a99c90c34a7a448d2c326151aa243, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -678,7 +694,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6103027764429350003, guid: 41435ff373eb4f3468ee1545e4dd043d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.794737
+      value: 8.390302
       objectReference: {fileID: 0}
     - target: {fileID: 6103027764429350003, guid: 41435ff373eb4f3468ee1545e4dd043d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -756,6 +772,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 798718567}
     m_Modifications:
+    - target: {fileID: 1513093727276174472, guid: 385a99c90c34a7a448d2c326151aa243, type: 3}
+      propertyPath: m_Color.a
+      value: 0.56078434
+      objectReference: {fileID: 0}
     - target: {fileID: 1513093727276174473, guid: 385a99c90c34a7a448d2c326151aa243, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -899,6 +919,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 798718567}
     m_Modifications:
+    - target: {fileID: 1513093727276174472, guid: 385a99c90c34a7a448d2c326151aa243, type: 3}
+      propertyPath: m_Color.a
+      value: 0.56078434
+      objectReference: {fileID: 0}
     - target: {fileID: 1513093727276174473, guid: 385a99c90c34a7a448d2c326151aa243, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -1113,7 +1137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1199552700606997181, guid: 99944d8e4efe1c64b8427b37ea7cd7c6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.794737
+      value: 8.390302
       objectReference: {fileID: 0}
     - target: {fileID: 1199552700606997181, guid: 99944d8e4efe1c64b8427b37ea7cd7c6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2343,6 +2367,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 798718567}
     m_Modifications:
+    - target: {fileID: 1513093727276174472, guid: 385a99c90c34a7a448d2c326151aa243, type: 3}
+      propertyPath: m_Color.a
+      value: 0.56078434
+      objectReference: {fileID: 0}
     - target: {fileID: 1513093727276174473, guid: 385a99c90c34a7a448d2c326151aa243, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -3098,6 +3126,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 798718567}
     m_Modifications:
+    - target: {fileID: 1513093727276174472, guid: 385a99c90c34a7a448d2c326151aa243, type: 3}
+      propertyPath: m_Color.a
+      value: 0.56078434
+      objectReference: {fileID: 0}
     - target: {fileID: 1513093727276174473, guid: 385a99c90c34a7a448d2c326151aa243, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -3358,6 +3390,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 798718567}
     m_Modifications:
+    - target: {fileID: 1513093727276174472, guid: 385a99c90c34a7a448d2c326151aa243, type: 3}
+      propertyPath: m_Color.a
+      value: 0.56078434
+      objectReference: {fileID: 0}
     - target: {fileID: 1513093727276174473, guid: 385a99c90c34a7a448d2c326151aa243, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -3554,6 +3590,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 798718567}
     m_Modifications:
+    - target: {fileID: 1513093727276174472, guid: 385a99c90c34a7a448d2c326151aa243, type: 3}
+      propertyPath: m_Color.a
+      value: 0.56078434
+      objectReference: {fileID: 0}
     - target: {fileID: 1513093727276174473, guid: 385a99c90c34a7a448d2c326151aa243, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -3622,6 +3662,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 798718567}
     m_Modifications:
+    - target: {fileID: 1513093727276174472, guid: 385a99c90c34a7a448d2c326151aa243, type: 3}
+      propertyPath: m_Color.a
+      value: 0.56078434
+      objectReference: {fileID: 0}
     - target: {fileID: 1513093727276174473, guid: 385a99c90c34a7a448d2c326151aa243, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -3882,6 +3926,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 798718567}
     m_Modifications:
+    - target: {fileID: 1513093727276174472, guid: 385a99c90c34a7a448d2c326151aa243, type: 3}
+      propertyPath: m_Color.a
+      value: 0.56078434
+      objectReference: {fileID: 0}
     - target: {fileID: 1513093727276174473, guid: 385a99c90c34a7a448d2c326151aa243, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -4457,6 +4505,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 798718567}
     m_Modifications:
+    - target: {fileID: 1513093727276174472, guid: 385a99c90c34a7a448d2c326151aa243, type: 3}
+      propertyPath: m_Color.a
+      value: 0.56078434
+      objectReference: {fileID: 0}
     - target: {fileID: 1513093727276174473, guid: 385a99c90c34a7a448d2c326151aa243, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -4909,6 +4961,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 798718567}
     m_Modifications:
+    - target: {fileID: 1513093727276174472, guid: 385a99c90c34a7a448d2c326151aa243, type: 3}
+      propertyPath: m_Color.a
+      value: 0.56078434
+      objectReference: {fileID: 0}
     - target: {fileID: 1513093727276174473, guid: 385a99c90c34a7a448d2c326151aa243, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -5557,6 +5613,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 798718567}
     m_Modifications:
+    - target: {fileID: 1513093727276174472, guid: 385a99c90c34a7a448d2c326151aa243, type: 3}
+      propertyPath: m_Color.a
+      value: 0.56078434
+      objectReference: {fileID: 0}
     - target: {fileID: 1513093727276174473, guid: 385a99c90c34a7a448d2c326151aa243, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -6880,6 +6940,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 798718567}
     m_Modifications:
+    - target: {fileID: 1513093727276174472, guid: 385a99c90c34a7a448d2c326151aa243, type: 3}
+      propertyPath: m_Color.a
+      value: 0.56078434
+      objectReference: {fileID: 0}
     - target: {fileID: 1513093727276174473, guid: 385a99c90c34a7a448d2c326151aa243, type: 3}
       propertyPath: m_RootOrder
       value: -1
